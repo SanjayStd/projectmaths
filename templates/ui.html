@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Project math</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/b/bc/PSM_V78_D337_Archimedes.png">
+</head>
+<body>
+
+<div class="header">
+    <ul id="menuList">
+        <li><a href="#home">Home<div class="line1"></div></a></li>
+        <li><a href="#ps"><span><a href="#problem">Solve now!</a></span><div class="line1"></div></a></li>
+        <li onclick="info()"><a href="#">Contact<div class="line1"></div></a></li>
+        <li onclick="about()"><a href="#">About<div class="line1"></div></a></li>
+    </ul>
+</div>
+
+<div class="headings">
+    <h1 id="home">Find the √root of your expression</h1>
+</div>
+
+<div class="start">
+    <h2><a href="#ps"><span><a href="#problem">Find Now!</a></span></a></h2>
+</div>
+{% if error_message %}
+        <div class="notification">
+            {{ error_message }}
+        </div>
+    {% endif %}
+
+<div class="page2" id="ps">
+    <form action="{{ url_for('result') }}" method="post">
+        <!-- Add anchor tag to redirect to result page -->
+        <a name="ps"></a>
+        <h1 id="problem">Enter your algebraic or trigonometric expression</h1><br>
+        <label>Enter the function:</label>
+        <input type="text" name="expression" placeholder="Enter expression" required><br>
+        <label>Enter the decimal places:</label>
+        <input type="text" name="decimal_places" placeholder="Decimal places" required>
+        <!-- Change the button type to submit -->
+        <button type="submit">Solve</button>
+    </form>
+</div>
+
+<script>
+    function info()
+{
+  alert("Information not updated yet");
+}
+
+function about()
+{
+  alert("A Capstone project made by the department of Mechanical Engineering.");
+}</script
+
+
+<!-- Other HTML content remains unchanged -->
+
+<div class="footer">
+    <h4>Designed with <span>❤</span> |  2024</h4>
+</div>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: url(bg.gif);
+    background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+.header
+{
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    color: #000;
+    padding: 15px 15px 15px 15px ;
+    border-radius: 10px;
+    box-shadow: 5px 5px 50px white;
+    animation: header 0.8s ;
+}
+@keyframes header 
+{
+    0%
+    {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.header ul 
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+
+}
+.header ul li 
+{
+    list-style: none;
+}
+.header ul li a 
+{
+    text-decoration: none;
+    color: #000;
+    transition: 0.4s;
+}
+
+.header ul .line1
+{
+    display: block;
+    height: 3px;
+    width: 0%;
+    background: #000;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 5px;
+    transition: 0.4s;
+}
+
+
+.header ul li a:hover .line1
+{
+    width: 100%;
+    height: 2px;
+    animation: animate .8s ease-in-out;
+}
+@keyframes animate 
+{
+    0%{
+        width: 0%;
+    }
+    50%
+    {
+        width: 100%;
+    }
+}
+.header img 
+{
+    width: 30px;
+    margin-left: 25px;
+    display: none;
+}
+.heading h1 
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #fff;
+    animation: heading 1s;
+    margin-top: -100px;
+}
+.headings h1 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #fff;
+    animation: heading 1s;
+    margin-top: -100px;
+}
+@keyframes heading  
+{
+    0%
+    {
+        margin-top: 50px;
+        opacity: 0%;
+    }
+}
+.start 
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #000;
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px 10px 10px ;
+    cursor: pointer;
+    font-size: 0.8em;
+    box-shadow: 5px 5px 50px white;
+    transition: 0.3s;
+    animation: start 1s;
+}
+@keyframes start 
+{
+    0%
+    {
+        opacity: 0%;
+        margin-top: -50px;
+    }
+}
+.start:hover
+{
+     box-shadow: 1px 5px 30px white;
+}
+.start h2 a
+{
+    text-decoration: none;
+    color: #000;
+}
+.page2
+{
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    
+
+}
+.page2 form 
+{
+    position: absolute;
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    backdrop-filter: blur(20px);
+    color: #fff;
+    padding: 40px 40px;
+    border-radius: 20px;
+    margin-top: 230px;
+    box-shadow: 5px 5px 50px white;
+
+}
+.page2 label 
+{
+    font-size: 1.2em;
+    text-align: center;
+    margin-right: 30px;
+}
+.page2 form h3 
+{
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #000;
+    text-decoration: underline;
+}
+.page2 form input 
+{
+    height: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    backdrop-filter: blur(50px);
+    box-shadow: 5px 5px 50px white;
+    border: none;
+
+}
+::placeholder
+{
+    font-weight: 400;
+    font-size: 0.8em;
+}
+.page2 form button 
+{
+    display: block;
+    text-align: center;
+    height: 30px;
+    width: 90px;
+    font-size: 1.4em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    outline: 1px solid;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 280px;
+    margin-top: 10px;
+}
+.footer 
+{
+    position: absolute;
+    top: 240%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    box-shadow: 5px 5px 50px white;
+}
+.footer h4 
+{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+.footer h4 span 
+{
+    color: red;
+}
+
+.back h2 a
+{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color:#fff;
+    text-decoration: none;
+    position:absolute;
+    top: 80%;
+    left:50%;
+    transform:translate(-50%,50%);
+    background: #fff;
+    box-shadow: 10px 10px 50px white;
+    border-radius: 20px;
+    color: #000;
+    padding: 10px 10px 10px;
+    font-size: 0.8em;
+}
+
+.emptytag h3 
+{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0%;
+}
+.result
+{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px)
+{
+    .page2 form{
+        position: absolute;
+        top: 165%;
+    }
+    .header
+    {
+        position: absolute;
+        top: 8%;
+    }
+    .header ul
+    {
+        display: inline-flex;
+        justify-content: space-evenly;
+        gap: 50px;
+        text-align: center;
+    }
+    .footer
+    {
+        position: absolute;
+        top: 250%;
+    }
+    .back h2 a
+    {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .header
+    {
+        position: absolute;
+        top: 8%;
+    }
+    .header ul
+    {
+        display: inline-flex;
+        justify-content: space-evenly;
+        gap: 25px;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .page2 form{
+        position: absolute;
+        top: 170%;
+    }
+    .footer
+    {
+        position: absolute;
+        top: 270%;
+    }
+    .back h2 a
+    {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+@media (max-width: 480px)
+{
+    .heading h1
+    {
+        font-size: 1.8em;
+        width: 100%;
+    }
+    .header 
+    {
+        position: absolute;
+        top: 8%;
+        padding-top: 2px;
+        padding-bottom: 20px;
+        font-size: 1em;
+    }
+    .header ul
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        font-size: 0.8em;
+        text-align: center;
+        height: 30px;
+    }
+    .header li 
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .start
+    {
+        position: absolute;
+        top: 70%;
+    }
+    .page2 form 
+    {
+        position: absolute;
+        top: 170%;
+        font-size: 0.8em;
+        width: 95%;
+    }
+    .page2 button{
+        position: absolute;
+        right: 25%;
+        transform: translate(-50%,-50%);
+    }
+    .footer
+    {
+        position: absolute;
+        top: 270%;
+    }
+    .back h2 
+    {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+    .result{
+        width: 95%;
+        position: absolute;
+        top: -5%;
+    }
+}
+.result {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 5px 5px 50px white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+
+}
+
+.result h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.result ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.result li {
+    margin-bottom: 10px;
+}
+
+.result p {
+    text-align: center;
+}
+/* Add this CSS to your existing stylesheet or create a new one */
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000; /* Red color */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999; /* Ensure the notification is above other content */
+}

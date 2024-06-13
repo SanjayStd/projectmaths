@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <title>Result</title>
+</head>
+<body>
+
+
+<div class="heading">
+    <h1 id="home">Result</h1>
+</div>
+
+<div class="back">
+    <h2><a href="http://127.0.0.1:5000/#problem">Return back</a></h2>
+</div>
+
+
+<div class="result">
+    {% if partial_derivatives %}
+        <h2>Partial Derivatives:</h2>
+        <ul>
+            {% for var, derivative in partial_derivatives.items() %}
+                <li>{{ var }}: {{ derivative }}</li>
+            {% endfor %}
+        </ul>
+        <p>Decimal Places: {{ decimal_places }}</p>
+    {% endif %}
+
+    {% if no_roots %}
+        <p>No roots found using Newton-Raphson method.</p>
+    {% endif %}
+
+    {% if roots is not none and roots %}
+        <h2>Roots found using Newton-Raphson method:</h2>
+        <ul>
+            {% for root in roots %}
+                <li>{{ root }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+
+<div class="footer">
+    <h4>Designed with <span>❤</span> | 2024</h4>
+</div>
+
+</body>
+</html>
